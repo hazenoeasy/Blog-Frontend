@@ -160,7 +160,7 @@
         return default_avatar
       },
       title() {
-        return `${this.article.title} - 文章 - 码神之路`
+        return `${this.article.title}`
       }
     },
     methods: {
@@ -174,6 +174,7 @@
         let that = this
         viewArticle(that.$route.params.id).then(data => {
           Object.assign(that.article, data.data)
+          console.log(that.article)
           that.article.editor.value = data.data.body.content
 
           that.getCommentsByArticle()
@@ -212,6 +213,7 @@
         let that = this
         getCommentsByArticle(that.article.id).then(data => {
           if(data.success){
+              console.log(data)
                that.comments = data.data
           }else{
              that.$message({type: 'error', message: '评论加载失败', showClose: true})

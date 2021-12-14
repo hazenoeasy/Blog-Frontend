@@ -21,35 +21,35 @@ export function getArticles(query, page) {
 export function getHotArtices() {
   return request({
     url: '/articles/hot',
-    method: 'post'
+    method: 'get'
   })
 }
 
 export function getNewArtices() {
   return request({
     url: '/articles/new',
-    method: 'post'
+    method: 'get'
   })
 }
 
 export function viewArticle(id) {
   return request({
     url: `/articles/view/${id}`,
-    method: 'post'
+    method: 'get'
   })
 }
 
 export function getArticlesByCategory(id) {
   return request({
     url: `/articles/category/${id}`,
-    method: 'post'
+    method: 'get'
   })
 }
 
 export function getArticlesByTag(id) {
   return request({
     url: `/articles/tag/${id}`,
-    method: 'post'
+    method: 'get'
   })
 }
 
@@ -66,13 +66,13 @@ export function publishArticle(article,token) {
 export function listArchives() {
   return request({
     url: '/articles/listArchives',
-    method: 'post'
+    method: 'get'
   })
 }
 
 export function getArticleById(id) {
   return request({
     url: `/articles/${id}`,
-    method: 'post'
+    method: 'get'
   })
 }

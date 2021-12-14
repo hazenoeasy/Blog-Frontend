@@ -1,9 +1,9 @@
 <template>
   <el-footer class="me-area">
     <div class="me-footer">
-      <p>Designed by
+      <p>
         <strong>
-          <router-link to="/" class="me-login-design-color">码神之路</router-link>
+          <a href="https://github.com/hazenoeasy/Blog-Backend" class="me-login-design-color">Github Repository</a>
         </strong>
       </p>
     </div>
