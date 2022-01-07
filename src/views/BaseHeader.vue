@@ -6,7 +6,7 @@
       </el-col>
 
       <el-col v-if="!simple" :span="16">
-        <el-menu :router=true menu-trigger="click" active-text-color="#5FB878" :default-active="activeIndex"
+        <el-menu :router=true menu-trigger="click" active-text-color="#909399" :default-active="activeIndex"
                  mode="horizontal">
           <el-menu-item index="/">Home</el-menu-item>
           <el-menu-item index="/category/all">Category</el-menu-item>
@@ -14,7 +14,7 @@
           <el-menu-item index="/archives">Archives</el-menu-item>
 
           <el-col :span="4" :offset="4">
-            <el-menu-item index="/write"><i class="el-icon-edit"></i>Write a Blog Now !</el-menu-item>
+            <el-menu-item index="/write" class="el-menu-item-content"><i class="el-icon-edit"></i>Share your Idea!</el-menu-item>
           </el-col>
 
         </el-menu>
@@ -25,7 +25,7 @@
       </template>
 
       <el-col :span="4">
-        <el-menu :router=true menu-trigger="click" mode="horizontal" active-text-color="#5FB878">
+        <el-menu :router=true menu-trigger="click" mode="horizontal" active-text-color="#909399">
 
           <template v-if="!user.login">
             <el-menu-item index="/login">
@@ -117,6 +117,9 @@
     border: 1px solid #ddd;
     border-radius: 50%;
     vertical-align: middle;
-    background-color: #5fb878;
+    background-color: #909399;
+  }
+  .el-menu-item-content {
+    color: #909399;
   }
 </style>

@@ -25,7 +25,7 @@
         </el-form-item>
       </el-form>
 
-  
+
 
     </div>
   </div>
@@ -134,7 +134,7 @@
   }
 
   .me-login-design-color {
-    color: #5FB878 !important;
+    color: #909399 !important;
   }
 
   .me-login-button {

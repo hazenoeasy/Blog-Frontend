@@ -49,7 +49,8 @@
     width: 40%;
     padding: 4px;
     font-size: 14px;
-    color: #5FB878;
+    color: #909399;
+
   }
 
   .me-category-item a:hover {

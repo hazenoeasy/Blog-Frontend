@@ -1,15 +1,17 @@
 <template>
   <el-card>
     <div class="me-author-name">
-    <span><i class="el-icon-user"></i> Hazenoeasy</span>
+    <font-awesome-icon :icon="['fas', 'blog']" class="user-secret"/><span>Hazenoeasy</span>
     </div>
     <div class="me-author-description">
-      <span><i class="el-icon-location-outline"></i>sdfsd</span>
-      <span><i class="me-icon-job"></i></span>
+      <div align="center">Developer in Software</div>
+      <div align="center">Now in NYC </div>
     </div>
     <div class="me-author-tool">
-      <i @click="showTool(qq)" :title="qq.title" class="iconfont icon-qq"></i>
-      <i @click="showTool(bilibili)" :title="bilibili.title" class="iconfont icon-bilibili-fill"></i>
+      <font-awesome-icon :icon="['fas', 'envelope-square']" class="user-secret"/>
+      <font-awesome-icon :icon="['fab', 'linkedin']" class="user-secret"/>
+      <font-awesome-icon :icon="['fab', 'github-square']" class="user-secret"/>
+      <font-awesome-icon :icon="['fab', 'instagram-square']" class="user-secret"/>
     </div>
   </el-card>
 
@@ -44,7 +46,12 @@ export default {
 .me-author-name {
   text-align: center;
   font-size: 30px;
-  border-bottom: 1px solid #5fb878;
+  border-bottom: 1px solid #909399;
+  /* margin: 20px 0px 20px 0px; */
+  padding-bottom:10px ;
+}
+.me-author-name span{
+  padding-left: 20px;
 }
 
 .me-author-description {
@@ -65,4 +72,10 @@ export default {
   padding: 4px 10px;
   font-size: 30px;
 }
+.me-author-tool .user-secret{
+cursor: pointer;
+  padding: 4px 10px;
+  font-size: 30px;
+}
+
 </style>

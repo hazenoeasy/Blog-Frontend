@@ -5,18 +5,21 @@ import router from './router'
 import store from './store'
 
 import lodash from 'lodash'
-
 import ElementUI from 'element-ui'
 
-// import '@/assets/icon/iconfont.css'
-// import 'element-ui/lib/theme-chalk/index.css'
+import '@/assets/icon/iconfont.css'
 import {formatTime} from "./utils/time";
+import '@/assets/theme/index.css'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faEnvelopeSquare, faBlog} from '@fortawesome/free-solid-svg-icons'
+import { faLinkedin, faGithubSquare, faInstagramSquare} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-
+library.add([faLinkedin,faGithubSquare,faInstagramSquare,faEnvelopeSquare,faBlog])
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
-
+Vue.component('font-awesome-icon',FontAwesomeIcon)
 Object.defineProperty(Vue.prototype, '$_', { value: lodash })
 
 
