@@ -67,6 +67,7 @@
 
   export default {
     name: "CommentItem",
+    // inject:['reload'],
     props: {
       articleId: String,
       comment: Object,
@@ -109,16 +110,18 @@
         publishComment(that.reply,this.$store.state.token).then(data => {
           if(data.success){
             that.$message({type: 'success', message: '评论成功', showClose: true})
-            if(!that.comment.children){
-              that.comment.children = []
-            }
-            that.comment.children.unshift(data.data)
-            that.$emit('commentCountsIncrement')
-            that.showComment(that.commentShowIndex)
+            // if(!that.comment.children){
+            //   that.comment.children = []
+            // }
+            // that.comment.children.unshift(data.data)
+            // that.$emit('commentCountsIncrement')
+            // that.showComment(that.commentShowIndex)
+            that.$router.go()
           }else{
              that.$message({type: 'error', message: data.msg, showClose: true})
           }
         }).catch(error => {
+          console.log(error)
           if (error !== 'error') {
             that.$message({type: 'error', message: '评论失败', showClose: true})
           }
@@ -128,7 +131,7 @@
       getEmptyReply() {
         return {
           articleId: this.articleId,
-          parent: this.comment.id,
+          parentId: this.comment.id,
           toUserId: '',
           content: ''
         }

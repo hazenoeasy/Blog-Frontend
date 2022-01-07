@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "axios": "^0.24.0",
-    "element-ui": "^2.0.10",
+    "element-ui": "^2.15.6",
+    "install": "^0.13.0",
     "lodash": "^4.17.4",
     "mavon-editor": "^2.10.1",
     "vue": "^2.5.2",

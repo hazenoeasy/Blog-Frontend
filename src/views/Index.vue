@@ -59,7 +59,7 @@
           that.hotArticles = data.data
         }).catch(error => {
           if (error !== 'error') {
-            that.$message({type: 'error', message: '最热文章加载失败!', showClose: true})
+            that.$message({type: 'error', message: 'Hot Articles Loading Fail!', showClose: true})
           }
 
         })
@@ -71,7 +71,7 @@
           that.newArticles = data.data
         }).catch(error => {
           if (error !== 'error') {
-            that.$message({type: 'error', message: '最新文章加载失败!', showClose: true})
+            that.$message({type: 'error', message: 'Latest Articles Loading Fail!', showClose: true})
           }
 
         })
@@ -83,7 +83,7 @@
           that.hotTags = data.data
         }).catch(error => {
           if (error !== 'error') {
-            that.$message({type: 'error', message: '最热标签加载失败!', showClose: true})
+            that.$message({type: 'error', message: 'Hot Category Loading Fail!', showClose: true})
           }
 
         })
@@ -93,7 +93,7 @@
           this.archives = data.data
         })).catch(error => {
           if (error !== 'error') {
-            that.$message({type: 'error', message: '文章归档加载失败!', showClose: true})
+            that.$message({type: 'error', message: 'Archive Loading Fail!', showClose: true})
           }
         })
       }

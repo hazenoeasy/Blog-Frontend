@@ -221,7 +221,7 @@
               if(data.success){
                 loading.close();
                 that.$message({message: '发布成功啦', type: 'success', showClose: true})
-                that.$router.push({path: `/view/${data.data.id}`})
+                that.$router.push({path: `/view/${data.data}`})
               }else{
                 that.$message({message: error, type: '发布文章失败:'+data.msg, showClose: true});
               }

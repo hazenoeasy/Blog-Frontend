@@ -174,7 +174,6 @@
         let that = this
         viewArticle(that.$route.params.id).then(data => {
           Object.assign(that.article, data.data)
-          console.log(that.article)
           that.article.editor.value = data.data.body.content
 
           that.getCommentsByArticle()
@@ -194,10 +193,10 @@
         publishComment(parms,this.$store.state.token).then(data => {
           if(data.success){
             that.$message({type: 'success', message: '评论成功', showClose: true})
-            that.comment.content = ''
-            that.comments.unshift(data.data)
-            that.commentCountsIncrement()
-
+            // that.comment.content = ''
+            // that.comments.unshift(data.data)
+            // that.commentCountsIncrement()
+             that.$router.go()
           }else{
                that.$message({type: 'error', message: data.msg, showClose: true})
           }
@@ -213,7 +212,6 @@
         let that = this
         getCommentsByArticle(that.article.id).then(data => {
           if(data.success){
-              console.log(data)
                that.comments = data.data
           }else{
              that.$message({type: 'error', message: '评论加载失败', showClose: true})
